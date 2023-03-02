@@ -3,13 +3,9 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-
-    }
-  },
-  methods: {
-  }
-}
+export default {}
 </script>
+
+<style lang="scss">
+@import "./scss/main";
+</style>
