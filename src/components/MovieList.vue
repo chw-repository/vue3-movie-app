@@ -3,9 +3,8 @@
     <div class="inner">
       <MovieItem
         v-for="movie in movies"
-        :key="movie.imdbID">
-        {{ movie }}
-      </MovieItem>
+        :key="movie.imdbID"
+        :movie="movie" />
     </div>
   </div>
 </template>
@@ -17,11 +16,16 @@ import MovieItem from "./MovieItem.vue";
 export default {
   name: "MovieList",
   components: {MovieItem},
-  data() {
-    return {
-      movies: []
+  computed: {
+    movies() {
+      return this.$store.state.movie.movies
     }
   }
+  // data() {
+  //   return {
+  //     movies: []
+  //   }
+  // }
 }
 </script>
 

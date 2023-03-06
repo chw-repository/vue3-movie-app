@@ -1,13 +1,18 @@
 <template>
-  <div class="container">
-    <div class="inner">
-    </div>
+  <div>
+    {{ movie.Title }}
   </div>
 </template>
 
 <script>
 export default {
-  name: "MovieItem"
+  name: "MovieItem",
+  props: {
+    movie: {
+      type: Object,
+      default: () => ({})
+    }
+  }
 }
 </script>
 
